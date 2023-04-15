@@ -2,6 +2,12 @@
 
 A Node.js module that selects an online server from a list of servers based on their priority.
 
+## Build&Tests
+
+To run this module clone the repo and run the following
+
+`npm run prepare && npm run test`
+
 ## Installation
 
 To use `findServer` in your Node.js project, you can install it via npm:
