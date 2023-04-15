@@ -11,6 +11,7 @@ interface Server {
 **/
 async function findServer(serverList: Server[]): Promise<Server | string> {
     const promises = serverList.map(server =>
+        // TODO: add a check to servers to make sure the content dynamically correct before accessing axios
         axios
             .get(server.url, { timeout: 5000 })
             .then(response => {
