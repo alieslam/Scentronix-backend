@@ -12,6 +12,8 @@ async function findServer(serverList: Server[]): Promise<Server | string> {
             .then(response => {
                 if (response.status >= 200 && response.status < 300) {
                     return { url: server.url, priority: server.priority };
+                }else{
+                  return Promise.reject({ error: response.status, description: 'Error in network' });
                 }
             })
             .catch(error => {
