@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-interface Server {
+export interface Server {
     url: string;
     priority: number;
 }
