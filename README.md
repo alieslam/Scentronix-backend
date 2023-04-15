@@ -12,7 +12,7 @@ To run this module clone the repo and run the following
 
 To use `findServer` in your Node.js project, you can install it via npm:
 
-`npm install findserver-scentronix`
+`npm install findserver-scentronixx`
 
 ## Usage
 

@@ -1,5 +1,5 @@
 {
-  "name": "findserver-scentrnx",
+  "name": "findserver-scentronixx",
   "version": "0.0.1",
   "description": "A module to check servers are online",
   "main": "./lib/index.js",
