@@ -23,9 +23,9 @@ describe('Lowest priority server', () => {
                 priority: 2,
             },
         ];
-
+        // Mock the responses for Jest
         const getMock = jest.spyOn(axios, 'get');
-
+        // TODO: There's an issue when rejecting the Promise, always flags and unhandled promise rejection. Make sure to solve it
         getMock.mockImplementation((url: string) => {
             const responses: Record<string, Promise<any>> = {
                 'https://does-not-work.perfume.new': Promise.resolve({ status: 404 }),
