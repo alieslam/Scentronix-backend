@@ -4,13 +4,14 @@
         "module": "commonjs",
         "lib": ["es2018", "dom"],
         "sourceMap": true,
-        "outDir": "dist/src",
+        "outDir": "./lib",
         "strict": true,
         "esModuleInterop": true,
         "baseUrl": ".",
         "paths": {
             "@src/*": ["src/*"]
-        }
+        },
+        "declaration": true
     },
     "include": ["src/**/*.ts"],
     "exclude": ["node_modules", "**/*.spec.ts"]

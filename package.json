@@ -1,8 +1,10 @@
 {
-  "name": "findserver",
+  "name": "findserver-scentrnx",
   "version": "0.0.1",
   "description": "A module to check servers are online",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": "./lib/index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
     "test": "jest",
@@ -10,11 +12,19 @@
     "test:coverage": "jest --coverage",
     "build": "tsc",
     "start:dev": "ts-node -r tsconfig-paths/register ./src/index.ts",
-    "start:prod": "node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/index.js"
+    "start:prod": "node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/index.js",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test"
   },
-  "keywords": [],
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "findServer"
+  ],
   "author": "Scentronix",
   "license": "ISC",
+  "type": "commonjs",
   "dependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
@@ -37,5 +47,9 @@
     "eslint-plugin-promise": "^6.1.1",
     "nodemon": "^2.0.22",
     "typescript": "^5.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/alieslam/Scentronix-backend.git)"
   }
 }
