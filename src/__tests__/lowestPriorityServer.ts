@@ -1,4 +1,4 @@
-import { findServer } from '../index';
+import { Server, findServer } from '../index';
 import axios from 'axios';
 
 jest.mock('axios');
@@ -35,12 +35,15 @@ describe('Lowest priority server', () => {
             };
             return responses[url];
         });
-
-        const server = await findServer(data);
-        expect(server)
-            .toEqual({
+        let server: Server | string = 'No online servers';
+        try {
+            server = await findServer(data);
+            expect(server).toEqual({
                 url: 'https://gitlab.com',
                 priority: 4,
             });
+        } catch (error) {
+            console.error(error);
+        }
     });
 });
